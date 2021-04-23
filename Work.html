@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Todd Burciaga | Web Portfolio</title>
+  <meta charset="utf-8">
+  <meta name ="description" content="The Web Portfolio of Todd Burciaga">
+  <meta name="keywords" content="CV, portfolio, resume, background, work, history, todd, burciaga">
+  <meta name="author" content="Todd Burciaga">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="lib/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- !NAVBAR STYLING! -->
+<nav class="navbar navbar-expand-sm bg-white navbar-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">home</a>  
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="work.html" id="active">work</a>
+          </li>        
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">about</a>
+        </li> 
+      </ul>
+    </div>
+    <div class="toplogo">
+      <a href="index.html"><img src="assets/logo.png" width="200px"></a>
+    </div>  
+  </nav>
+
+<!-- !PAGE CONTENT! -->
+
+  <!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:24px"></div>
+
+  <!-- !PHOTO GRID! -->
+  <div class="w3-row-padding">
+    <div class="w3-third" id="image">
+        <h5>Thematic Maps and Styles</h5>
+        <img src="assets/1-touroficeland.jpg" class="Image" style="width:90%" border="5" onclick="onClick(this)" alt="<b><u>Cycling Tour of Iceland Thematic Map</u></b><br><b>Applications:</b> ArcGIS Desktop, Adobe Photoshop, Adobe Illustrator<br><b>Data Sources:</b> Landmælingar Islands, Copernicus Land Monitoring Service, GEBCO"><br>
+        <img src="assets/3-sgcc.png" class="Image" style="width:90%" onclick="onClick(this)" alt="<b><u>Local Community Thematic Map</u></b><br><b>Applications:</b> ArcGIS Desktop, Adobe Illustrator<br><b>Data Sources:</b> State of Utah, St. George"><br>
+        <img src="assets/4-stmapstyle.png" class="Image" style="width:90%" onclick="onClick(this)" alt="<b><u>Stylized Map Tilesets</u></b><br><b>Application:</b> Mapbox Studio<br><b>Data Sources:</b> Open StreetMap, Daniel Huffman"><br>
+    </div>
+
+    <div class="w3-third" id="image">
+        <h5>Analytical Visualizations</h5>
+        <img src="assets/2-popincmap.png" style="width:90%" onclick="onClick(this)" alt="<b><u>Multivariate Mapping</u><br>Applications:</b> ArcGIS Desktop<br><b>Data Sources:</b> U.S. Census Bureau, City of Chicago" class="Image" ><br>
+        <img src="assets/6-successionroutes.png" class="Image" style="width:90%" onclick="onClick(this)" alt="<b><u>Automated Route Generation</u><br>Applications:</b> FME Server, Navigator for ArcGIS<br><b>Data Sources:</b> esri"><br>
+    </div>
+    
+    <div class="w3-third" id="image">
+        <h5>Process Automation and Custom Application Configuration</h5>
+        <img src="assets/7-fme.png" class="Image" style="width:90%" onclick="onClick(this)" alt="<b><u>FME Desktop/Server Process Automation</u><br>Applications:</b> ArcGIS Desktop, FME Server<br><b>Data Sources:</b> Peoples Gas"><br>
+        <img src="assets/5-vaultinspect.png" class="Image" style="width:90%" onclick="onClick(this)" alt="<b><u>Inspection Application Configuration</u><br>Applications:</b> Collector for ArcGIS, Workforce for ArcGIS, Survey123 for ArcGIS<br><b>Data Sources:</b> Peoples Gas, esri"><br>
+        <img src="assets/8-geoconx17.png" class="Image" style="width:90%" onclick="onClick(this)" alt="<b><u>Custom Application Configuration</u><br>Applications: </b>Survey123 for ArcGIS, Collector for ArcGIS, Workforce For ArcGIS<br><b>Data Sources:</b> Peoples Gas, esri"><br>
+        <img src="assets/9-geoconx18.png" class="Image" style="width:90%" onclick="onClick(this)" alt="<b><u>Custom Application Configuration</u><br>Applications: </b>FME Desktop/Server, Workforce for ArcGIS, Navigator for ArcGIS<br><b>Data Sources:</b> Peoples Gas, esri"><br>
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+<!-- !PAGE FOOTER! -->
+  <div class="card-footer text-center" style="margin-top:0">
+      <p>© Todd Burciaga</p>
+  </div>
+
+<!-- !JAVASCRIPT! -->
+<script>
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>

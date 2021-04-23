@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Todd Burciaga | Web Portfolio</title>
+  <meta charset="utf-8">
+  <meta name ="description" content="The Web Portfolio of Todd Burciaga">
+  <meta name="keywords" content="CV, portfolio, resume, background, work, history, todd, burciaga">
+  <meta name="author" content="Todd Burciaga">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="lib/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- !NAVBAR STYLING! -->
+<nav class="navbar navbar-expand-sm bg-white navbar-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html" id="active">home</a>  
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="work.html">work</a>
+        </li>       
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">about</a>
+      </li>   
+    </ul>
+  </div>
+  <div class="toplogo">
+    <a href="index.html"><img src="assets/logo.png" width="200px"></a>
+  </div>  
+</nav>
+
+<!-- !PAGE CONTENT! -->
+
+This is a page!
+
+<!-- !PAGE FOOTER! -->
+  <div class="card-footer text-center" style="margin-top:0">
+      <p>© Todd Burciaga</p>
+  </div>
+
+<!-- !JAVASCRIPT! -->
+<script>
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+</body>
+</html>
+
